@@ -1,0 +1,27 @@
+{
+  "name": "fromholdio/silverstripe-gridfield-extradata",
+  "type": "silverstripe-vendormodule",
+  "description": "Provides a mechanism to define extra data during GridField definition that will be passed to objects created via the grid field",
+  "license": "BSD-3-Clause",
+  "keywords": ["silverstripe"],
+  "homepage": "https://github.com/fromholdio/silverstripe-gridfield-extradata",
+  "support": {
+    "issues": "https://github.com/fromholdio/silverstripe-gridfield-extradata/issues"
+  },
+  "authors": [{
+    "name": "Luke Fromhold",
+    "homepage": "https://fromhold.io"
+  }],
+  "require": {
+    "silverstripe/vendor-plugin": "^1.0",
+    "silverstripe/cms": "^4.1",
+    "symbiote/silverstripe-gridfieldextensions": "^3.3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Fromholdio\\GridFieldExtraData\\": "src/"
+    }
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev"
+}
