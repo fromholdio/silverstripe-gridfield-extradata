@@ -8,7 +8,6 @@ use SilverStripe\Forms\GridField\GridFieldConfig;
 use SilverStripe\Forms\GridField\GridFieldDataColumns;
 use SilverStripe\Forms\GridField\GridFieldDeleteAction;
 use SilverStripe\Forms\GridField\GridFieldEditButton;
-use SilverStripe\Forms\GridField\GridFieldPaginator;
 use Symbiote\GridFieldExtensions\GridFieldAddNewMultiClass;
 use Symbiote\GridFieldExtensions\GridFieldConfigurablePaginator;
 use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
@@ -44,8 +43,8 @@ class GridFieldConfig_ExtraData extends GridFieldConfig
         }
 
         if (!is_null($itemsPerPage)) {
-            $pagination = new GridFieldPaginator($itemsPerPage);
-            $this->addComponent($pagination);
+            $paginator = new GridFieldConfigurablePaginator($itemsPerPage);
+            $this->addComponent($paginator);
         }
 
         $this->addComponent(new GridFieldExtraDataDetailForm(
